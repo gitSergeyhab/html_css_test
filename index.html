@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <title>Техномарт</title>
 </head>
 <body>
     <header>
-
         <div>
-            <div class="logo">ТЕХНОМАРТ</div>
-            <input type="text" placeholder="Поиск" name="search" id="search"/>
+            <div class="logo"> <h1>ТЕХНОМАРТ</h1> </div>
+            <input type="search" placeholder="Поиск" name="search" id="search"/>
             <div>Закладки: 0</div>
             <div>Корзина: 0</div>
-            <button type="button">Оформить заказ</button>
+            <button type="button" id="buy">Оформить заказ</button>
         </div>
-
         <div>
-            <div class="header-discripyion">Интернет-магазин строительных материалов и инструментов для рем.</div>
-            <div class="header_contacts">
-                <div class="header_phone">0-000-000-00-00</div>
-                <div class="header_adress">City, street, home</div>
-            </div>
-            <div class="header_reg_aut">
-                <div class="header_reg"></div>
-                <div class="header_aut"></div>
+            <div class="header-discripyion">
+                <p>Интернет-магазин строительных материалов и инструментов для рем.</p>
             </div>
 
+            <address class="header_address">
+                <a class="address_tel" href="tel:+78125550555">+7(812)555-0-555</a>
+                <p class="address_adr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            </address>
+
+            <div class="header_reg_aut">
+                <button type="button" class="header_aut" id="login" >Войти</button>
+                <button type="button" class="header_reg" id="registration">Регистрация</button>
+            </div>
         </div>
 
         <nav>
@@ -45,12 +47,43 @@
     </header>
     <main>
         <section class="about_all">
-            <div class="about_all_item new_all"></div>
-            <div class="about_all_item"></div>
-            <div class="about_all_item"></div>
-            <div class="about_all_item big_all"></div>
-            <div class="about_all_item"></div>
-            <div class="about_all_item"></div>
+            <div class="about_all_item">
+                <div class="about_all__text">
+                    <h3>Материалы</h3>
+                    <button type="button">На любой вкус</button>
+                </div>
+            </div>
+            <div class="about_all_item">
+                <div class="about_all__text">
+                    <h3>Инструмент</h3>
+                    <button type="button">На все случаи</button>
+                </div>
+            </div>
+            <div class="about_all_item">
+                <div class="about_all__text">
+                    <h3>Техника</h3>
+                    <button type="button">Для стройки</button>
+                </div>
+            </div>
+            <div class="about_all_item big_all">
+                <div class="about_all__slider">
+                    <img src="img/slider_perforators.jpg" alt="perforators" class="slider">
+                    <a href="catalog.html">Открыть каталог</a>
+
+                </div>
+            </div>
+            <div class="about_all_item">
+                <div class="about_all__text">
+                    <h3>Скидки 50%</h3>
+                    <button type="button">На 350 товаров</button>
+                </div>
+            </div>
+            <div class="about_all_item">
+                <div class="about_all__text">
+                    <h3>Доставка</h3>
+                    <button type="button">Бесплатно</button>
+                </div>
+            </div>
         </section>
 
         <section class="goods">
@@ -69,7 +102,7 @@
         <section class="firms">
             <header class="header_firms">
                 <h2>Популярные производители</h2>
-                <button type="button" id="all_pop_firms">Все производители</button>
+                <button type="button" id="show_all_firms">Все производители</button>
             </header>
             <div class="content_firms">
                 <div class="pop_firm"> BOSH</div>
@@ -106,9 +139,10 @@
                 <div class="services_img"></div>
             </div>
         </section>
+
         <section class="info">
             <div class="info_about">
-                <h2></h2>
+                <h2>КОМПАНИЯ «Техномарт»</h2>
                 <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
                 <p>Мы можем доставить ваш товар в самые отдаленные точки России!
                 Техномарт работает со многими транспортными компаниями:</p>
@@ -116,16 +150,15 @@
                     <li class="info_about_comp_item">Деловые линии</li>
                     <li class="info_about_comp_item">Автотрейдинг</li>
                     <li class="info_about_comp_item">ЖелДорЭкспедиция</li>
-
                 </ul>
-                <button type="button">Подробнее о компании</button>
+                <button type="button" id="show_comp_discription">Подробнее о компании</button>
             </div>
             <div class="info_contacts">
                 <h2>КОНТАКТЫ</h2>
                 <p>Вы можете забрать товар сами, 
                     заехав в наш офис:</p>
                 <img src="/img/map.jpg" alt="map" width="300" height="158" />
-                <button type="button">Заблудились? Напишите нам</button>
+                <button type="button" id="write_us">Заблудились? Напишите нам</button>
             </div>
         </section>
 
@@ -133,7 +166,71 @@
 
     </main>
     <footer>
+        <secnion class="top_footer">
+            <div class="top_footer__top">
+                <div class="footer_logo">
+                    <h2>Техномарт</h2>
+                </div>
+                <ul class="footer_list footer_top_list">
+                    <li class="footer_list_item"> <a href="#">Компания</a> </li>
+                    <li class="footer_list_item"><a href="#">Новости</a> </li>
+                    <li class="footer_list_item"><a href="#">Каталог</a> </li>
+                    <li class="footer_list_item"><a href="#">Доставка</a> </li>
+                    <li class="footer_list_item"><a href="#">Контакты</a> </li>
+
+                </ul>
+            </div>
+            <div class="top_footer__bottom">
+                <address class="footer_address">
+                    <a class="address_tel" href="tel:+78125550555">+7(812)555-0-555</a>
+                    <p class="address_adr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                </address>
+                <ul class="footer_list footer_bottom_list">
+                    <li class="footer_list_item"><a href="#">Материалы</a> </li>
+                    <li class="footer_list_item"><a href="#">Техника</a> </li>
+                    <li class="footer_list_item"><a href="#">Инструмент</a> </li>
+                    <li class="footer_list_item"><a href="#">Спецпредложения</a> </li>
+                </ul>
+
+            </div>
+        </secnion>
+        <section class="bottom_footer">
+            <div class="footer_info">
+
+            </div>
+            <div class="footer_social">
+                <ul class="footer_social_list">
+                    <li class="footer_social_item">vk</li>
+                    <li class="footer_social_item">fb</li>
+                    <li class="footer_social_item">ig</li>
+                </ul>
+            </div>
+            <div class="footer_contacts">
+                <ul class="footer_contact_list">
+                    <li class="footer_cotact_item">
+                        <p>
+                            Обратная связь:
+                        </p>
+                        <address>
+                            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                        </address>
+                    </li>
+
+                    <li class="footer_cotact_item">
+                        <p>
+                            Разработано — 
+                        </p> 
+                        <address>
+                            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                        </address>
+                        
+                    </li>
+
+                </ul>
+            </div>
+        </section>
 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
